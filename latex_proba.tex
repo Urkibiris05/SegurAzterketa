@@ -1,0 +1,235 @@
+\documentclass[12pt,a4paper]{article}
+
+% ===============================================
+% PAQUETES ESENCIALES
+% ===============================================
+\usepackage[utf8]{inputenc}        % Codificación UTF-8
+\usepackage[spanish]{babel}        % Idioma español
+\usepackage[T1]{fontenc}           % Codificación de fuentes
+\usepackage{lmodern}               % Fuente moderna
+\usepackage{microtype}             % Mejora tipografía
+
+% ===============================================
+% CONFIGURACIÓN DE PÁGINA
+% ===============================================
+\usepackage[left=2.5cm, right=2.5cm, top=3cm, bottom=3cm]{geometry}
+\usepackage{fancyhdr}              % Encabezados y pies de página
+\usepackage{setspace}              % Interlineado
+
+% ===============================================
+% PAQUETES MATEMÁTICOS
+% ===============================================
+\usepackage{amsmath}               % Matemáticas avanzadas
+\usepackage{amsfonts}              % Fuentes matemáticas
+\usepackage{amssymb}               % Símbolos matemáticos
+\usepackage{mathtools}             % Herramientas matemáticas
+
+% ===============================================
+% PAQUETES GRÁFICOS
+% ===============================================
+\usepackage{graphicx}              % Insertar imágenes
+\usepackage{float}                 % Control de posición de figuras
+\usepackage{subfig}                % Subfiguras
+\usepackage{xcolor}                % Colores
+\usepackage{tikz}                  % Gráficos vectoriales
+
+% ===============================================
+% PAQUETES DE TABLAS Y LISTAS
+% ===============================================
+\usepackage{booktabs}              % Tablas profesionales
+\usepackage{tabularx}              % Tablas con ancho fijo
+\usepackage{longtable}             % Tablas largas
+\usepackage{enumerate}             % Enumeraciones personalizadas
+\usepackage{enumitem}              % Control de listas
+
+% ===============================================
+% PAQUETES DE CÓDIGO
+% ===============================================
+\usepackage{listings}              % Insertar código
+\usepackage{verbatim}              % Texto literal
+
+% ===============================================
+% OTROS PAQUETES ÚTILES
+% ===============================================
+\usepackage{url}                   % URLs
+\usepackage{hyperref}              % Enlaces internos y externos
+\usepackage{cite}                  % Citas bibliográficas
+\usepackage{appendix}              % Apéndices
+
+% ===============================================
+% CONFIGURACIONES PERSONALIZADAS
+% ===============================================
+
+% Configurar encabezados
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Configurar código
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single,
+    breaklines=true,
+    breakatwhitespace=true
+}
+
+% Configurar enlaces
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    citecolor=green
+}
+
+% ===============================================
+% INFORMACIÓN DEL DOCUMENTO
+% ===============================================
+\title{Título de tu Documento}
+\author{Tu Nombre}
+\date{\today}
+
+% ===============================================
+% DOCUMENTO
+% ===============================================
+\begin{document}
+
+% Portada
+\maketitle
+\thispagestyle{empty}
+
+% Índice
+\newpage
+\tableofcontents
+\newpage
+
+% ===============================================
+% CONTENIDO PRINCIPAL
+% ===============================================
+
+\section{Introducción}
+
+Este es un ejemplo de plantilla LaTeX completa con los paquetes y configuraciones más comunes.
+
+\subsection{Subsección de ejemplo}
+
+Aquí puedes escribir el contenido de tu documento. Puedes usar \textbf{texto en negrita}, \textit{texto en cursiva}, \underline{texto subrayado}.
+
+\section{Matemáticas}
+
+\subsection{Ecuaciones inline}
+Puedes escribir ecuaciones en línea como $E = mc^2$ o $\sum_{i=1}^{n} x_i$.
+
+\subsection{Ecuaciones en display}
+También puedes usar ecuaciones en display:
+
+\begin{equation}
+    \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+\end{equation}
+
+\begin{align}
+    f(x) &= ax^2 + bx + c \\
+    f'(x) &= 2ax + b
+\end{align}
+
+\section{Figuras y Tablas}
+
+\subsection{Figuras}
+
+\begin{figure}[H]
+    \centering
+    % \includegraphics[width=0.5\textwidth]{imagen.png}
+    \caption{Ejemplo de figura}
+    \label{fig:ejemplo}
+\end{figure}
+
+\subsection{Tablas}
+
+\begin{table}[H]
+    \centering
+    \caption{Ejemplo de tabla}
+    \label{tab:ejemplo}
+    \begin{tabular}{lcr}
+        \toprule
+        Columna 1 & Columna 2 & Columna 3 \\
+        \midrule
+        Dato 1    & Dato 2    & Dato 3    \\
+        Dato 4    & Dato 5    & Dato 6    \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{Listas}
+
+\subsection{Lista con viñetas}
+\begin{itemize}
+    \item Primer elemento
+    \item Segundo elemento
+    \item Tercer elemento
+\end{itemize}
+
+\subsection{Lista numerada}
+\begin{enumerate}
+    \item Primer elemento
+    \item Segundo elemento
+    \item Tercer elemento
+\end{enumerate}
+
+\section{Código}
+
+\subsection{Código inline}
+Puedes usar código inline como \verb|print("Hola mundo")|.
+
+\subsection{Bloque de código}
+\begin{lstlisting}[caption=Ejemplo de código Python]
+def saludo(nombre):
+    """
+    Función que saluda a una persona
+    """
+    print(f"Hola {nombre}!")
+    return f"Saludos para {nombre}"
+
+# Llamar a la función
+resultado = saludo("Mundo")
+print(resultado)
+\end{lstlisting}
+
+\section{Referencias}
+
+Puedes referenciar figuras como la Figura~\ref{fig:ejemplo} o tablas como la Tabla~\ref{tab:ejemplo}.
+
+También puedes crear referencias a secciones. Por ejemplo, ve la Sección~\ref{sec:conclusion}.
+
+\section{Conclusión}
+\label{sec:conclusion}
+
+Esta plantilla incluye los elementos más comunes que necesitarás en un documento LaTeX. Puedes modificar y adaptar según tus necesidades específicas.
+
+% ===============================================
+% BIBLIOGRAFÍA (opcional)
+% ===============================================
+\begin{thebibliography}{9}
+\bibitem{ejemplo1}
+Apellido, N. (2023). \textit{Título del libro}. Editorial.
+
+\bibitem{ejemplo2}
+Autor, A. (2022). Título del artículo. \textit{Revista Científica}, 15(3), 123-145.
+\end{thebibliography}
+
+% ===============================================
+% APÉNDICES (opcional)
+% ===============================================
+\appendix
+\section{Apéndice A: Información adicional}
+
+Aquí puedes incluir información adicional, código extra, tablas extensas, etc.
+
+\end{document}
