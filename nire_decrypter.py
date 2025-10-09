@@ -28,50 +28,41 @@ mapeaketa = {
     'Z': 'Z'
 }
 
-texto_original = """
-RBTJ EAJV SJ DBR YTVQV HBJR EAJV NQ TJZT DQ BJT VTB EAJV HTV J QJTG DQ VJR.  
-DQ NJBTQJ VTB EAJV SJ HBJTZQV SJ NJBTJV QBJV RBTJ EAJV QJTG SJ TJG.  
-ZJT EAJV TJZT VJR TJZ VQJ DQ EAJV SBJ EAJV NJBTQJ HTV ZJTQV TJG RBTJ EAJV QJTG.  
-RBTJ VQJ SBJ TJG VTB SJ NJBTQJ DQ BJT EAJV ZJT VJR.  
-DQ EAJV NJBTQJ SJ TJG RBTJ DQ HBJTZQV TJG EAJV QJTG NQ TJZT.  
-EAJV SJ DQ TJZT NQ TJG DQ EAJV QJTG HTV SJ NJBTQJ.  
-RBTJ EAJV SBJ NQ HTV TJG EAJV VTB DQ EAJV QJTG ZJTQV TJG.  
-ZJT EAJV TJZT DQ HBJTZQV HTV NJBTQJ EAJV RBTJ DQ TJG VTB.  
-EAJV QJTG NQ TJZT SJ NJBTQJ DQ BJT EAJV HTV.  
-DQ NJBTQJ SJ HTV EAJV ZJT RBTJ DQ EAJV TJZT.
+testu_originala = """
+ABCD
 """
 
-def decrypter(texto_original, mapeaketa):
-    abecedario = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
-    texto_descifrado = ""
+def decrypter(testu_originala, mapeaketa):
+    alfabetoa = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+    testu_deszifratua = ""
     
-    for char in texto_original:
-        texto_descifrado += mapeaketa.get(char,char)
+    for char in testu_originala:
+        testu_deszifratua += mapeaketa.get(char,char)
     
-    print(texto_descifrado)
-    return texto_descifrado
+    print(testu_deszifratua)
+    return testu_deszifratua
 
-def contador_ordenado_mayor_a_menor(texto):
-    abecedario = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
-    contador = {letra: 0 for letra in abecedario}
+def karak_kont_ordenatuta(testua):
+    alfabetoa = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
+    kont = {letra: 0 for letra in alfabetoa}
     
-    for char in texto:
-        if char in contador:
-            contador[char] += 1
+    for char in testua:
+        if char in kont:
+            kont[char] += 1
     
-    # Ordenar el diccionario por frecuencia de mayor a menor
-    contador_ordenado = dict(sorted(contador.items(), key=lambda item: item[1], reverse=True))
+    # Hiztegia ordenatu handienetik txikienera
+    kontagailu_ordenatua = dict(sorted(kont.items(), key=lambda item: item[1], reverse=True))
     
-    for letra, freq in contador_ordenado.items():
-        if freq > 0:
-            print(f"{letra}: {freq}")
+    for letra, frek in kontagailu_ordenatua.items():
+        if frek > 0:
+            print(f"{letra}: {frek}")
     
-    return contador_ordenado
+    return kontagailu_ordenatua
 
 if __name__ == "__main__":
-   contador_ordenado_mayor_a_menor(texto_original)
+   karak_kont_ordenatuta(testu_originala)
    print("Testu zifratua: \n")
-   print(texto_original)
+   print(testu_originala)
    print("\nTestu deszifratua: \n")
-   decrypter(texto_original, mapeaketa)
+   decrypter(testu_originala, mapeaketa)
 
