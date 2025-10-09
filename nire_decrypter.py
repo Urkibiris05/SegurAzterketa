@@ -1,34 +1,45 @@
 mapeaketa = {
-    'A': 'D',
-    'B': 'Ñ',
-    'C': 'I',
-    'D': 'P',
-    'E': 'A',
-    'F': 'X',
-    'G': 'J',
-    'H': 'T',
-    'I': 'O',
-    'J': 'N',
-    'K': 'R',
-    'L': 'Z',
-    'M': 'H',
-    'N': 'S',
-    'Ñ': 'Z',
-    'O': 'F',
-    'P': 'M',
-    'Q': 'B',
-    'R': 'C',
-    'S': 'Q',
-    'T': 'L',
-    'U': 'G',
-    'V': 'Y',
-    'W': 'X',
-    'X': 'E',
-    'Y': 'K',
-    'Z': 'U'
+    'A': 'A',
+    'B': 'B',
+    'C': 'C',
+    'D': 'D',
+    'E': 'E',
+    'F': 'F',
+    'G': 'G',
+    'H': 'H',
+    'I': 'I',
+    'J': 'J',
+    'K': 'K',
+    'L': 'L',
+    'M': 'M',
+    'N': 'N',
+    'Ñ': 'Ñ',
+    'O': 'O',
+    'P': 'P',
+    'Q': 'Q',
+    'R': 'R',
+    'S': 'S',
+    'T': 'T',
+    'U': 'U',
+    'V': 'V',
+    'W': 'W',
+    'X': 'X',
+    'Y': 'Y',
+    'Z': 'Z'
 }
 
-texto_original = "RIJ AZKKZHC PIKCE XT ACKCUXJHX SZX, E NZ PEJXKE, PXGIK XFDKXNEQE RIPI RIPQEHCK ET OENRCNPI AXNAX ZJ RKCHXKCI AX CJAXDXJAXJRCE AX RTENX, E ACOXKXJRCE AXT RITEQIKERCIJCNPI OKXJHXDIDZTCNHE AX TE ACKXRRCIJ EJEKSZCNHE. AZKKZHC OZX ZJ OERHIK AX DKCPXK IKAXJ XJ XT DEDXT AX TE RTENX IQKXKE XJ REHETZJVE XJ GZTCI AX 1936. DXKI AZKKZHC, RIPI IRZKKX RIJ TEN DXKNIJETCAEAXN XJ TE MCNHIKCE, JI REVI AXT RCXTI. DXKNIJCOCREQE TE HKEACRCIJ KXvITZRCIJEKCE AX TE RTENX IQKXKE. NZ XJIKPX DIDZTEKCAEA XJHKX TE RTENX HKEQEGEAIKE, KXOTXGEAE XJ XT XJHCXKKI PZTHCHZACJEKCI XJ QEKRXTIJE XT 22 AX JIvCXPQKX AX 1936, PZXNHKE XNE CAXJHCOCRERCIJ. NZ PZXKHX OZX NCJ AZAE ZJ UITDX IQGXHCvI ET DKIRXNI KXvITZRCIJEKCI XJ PEKRME. NCJ AZKKZHC SZXAI PEN TCQKX XT REPCJI DEKE SZX XT XNHETCJCNPI, RIJ TE RIPDTCRCAEA AXT UIQCXKJI AXT OKXJHX DIDZTEK V AX TE ACKXRRCIJ EJEKSZCNHE, HXKPCJEKE XJ PEVI AX 1937 TE HEKXE AX TCSZCAEK TE KXvITZRCIJ, AXNPIKETCLEJAI E TE RTENX IQKXKE V OERCTCHEJAI RIJ XTTI XT DINHXKCIK HKCZJOI OKEJSZCNHE"
+texto_original = """
+RBTJ EAJV SJ DBR YTVQV HBJR EAJV NQ TJZT DQ BJT VTB EAJV HTV J QJTG DQ VJR.  
+DQ NJBTQJ VTB EAJV SJ HBJTZQV SJ NJBTJV QBJV RBTJ EAJV QJTG SJ TJG.  
+ZJT EAJV TJZT VJR TJZ VQJ DQ EAJV SBJ EAJV NJBTQJ HTV ZJTQV TJG RBTJ EAJV QJTG.  
+RBTJ VQJ SBJ TJG VTB SJ NJBTQJ DQ BJT EAJV ZJT VJR.  
+DQ EAJV NJBTQJ SJ TJG RBTJ DQ HBJTZQV TJG EAJV QJTG NQ TJZT.  
+EAJV SJ DQ TJZT NQ TJG DQ EAJV QJTG HTV SJ NJBTQJ.  
+RBTJ EAJV SBJ NQ HTV TJG EAJV VTB DQ EAJV QJTG ZJTQV TJG.  
+ZJT EAJV TJZT DQ HBJTZQV HTV NJBTQJ EAJV RBTJ DQ TJG VTB.  
+EAJV QJTG NQ TJZT SJ NJBTQJ DQ BJT EAJV HTV.  
+DQ NJBTQJ SJ HTV EAJV ZJT RBTJ DQ EAJV TJZT.
+"""
 
 def decrypter(texto_original, mapeaketa):
     abecedario = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"
@@ -58,8 +69,9 @@ def contador_ordenado_mayor_a_menor(texto):
     return contador_ordenado
 
 if __name__ == "__main__":
-   print("TEXTO ORIGINAL: \n")
+   contador_ordenado_mayor_a_menor(texto_original)
+   print("Testu zifratua: \n")
    print(texto_original)
-   print("\nTEXTO DESCIFRADO: \n")
+   print("\nTestu deszifratua: \n")
    decrypter(texto_original, mapeaketa)
 
